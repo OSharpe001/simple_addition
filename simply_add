@@ -1,0 +1,20 @@
+
+def add_all(lst):
+    try:
+        lst1=lst.split()
+        count=0
+        sum1=0
+        while count <len(lst1):
+            sum1+=float(lst1[count])
+            count+=1
+        return "SUM: {:.2F}".format(sum1)
+    except ValueError :
+        lst2=lst.split(',')
+        count=0
+        sum2=0
+        while count <len(lst2):
+            sum2+=float(lst2[count])
+            count+=1
+        return 'SUM: {:.2F}'.format(sum2)
+
+print(add_all(input('Please insert all numbers:')))
