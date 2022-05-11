@@ -13,7 +13,9 @@ def add_all(lst):
         count=0
         sum2=0
         while count <len(lst2):
-            sum2+=float(lst2[count])
+            try:
+                sum2+=float(lst2[count])
+            except ValueError: print("We can't add those values, lol!")
             count+=1
         return 'SUM: {:.2F}'.format(sum2)
 
